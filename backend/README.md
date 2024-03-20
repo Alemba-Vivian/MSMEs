@@ -15,7 +15,7 @@ The main objective of this Google Form is to gather diverse perspectives and exp
 
 For any inquiries or assistance regarding this Google Form, please contact:
 
-- **Email:** [mokuafiona@gmail.com](mailto:mokuafiona@gmail.com)
+- **Email:** [mokuafiona@gmail.com](mailto:mokuafiona@gmail.com),[stevekioko@gmail.com](mailto:stevekioko@gmail.com)
 
 ## Instructions
 
