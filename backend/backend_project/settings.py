@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     
     
     #localapps
-    "API",
+    "externalstakeholders_app",
 ]
 
 MIDDLEWARE = [

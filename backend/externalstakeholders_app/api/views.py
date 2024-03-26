@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ExternalStakeholder
+from ..models import ExternalStakeholder
 from .serializers import FormDataSerializer
 from rest_framework import generics
 # Create your views here.
