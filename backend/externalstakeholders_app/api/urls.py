@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import ExternalStakeholdersList,ExternalStakeholderDetail
-
+# from .views import ExternalStakeholdersList,ExternalStakeholderDetail
+from .views import ExternalStakeholdersViewSet, ExStakeholdersDetailViewSet
 
 urlpatterns = [
-    path("",ExternalStakeholdersList.as_view(),name="list"),
-    path("<int:pk>/",ExternalStakeholderDetail.as_view(),name="detail"),
+    path("", ExternalStakeholdersViewSet.as_view({'get': 'list', 'post': 'create'}), name="formview"),
+       path("<int:pk>/", ExStakeholdersDetailViewSet.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'}), name="external-stakeholder-detail"),
 ]
