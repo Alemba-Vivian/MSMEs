@@ -9,13 +9,13 @@ class MSMEquestionnaire(models.Model):
     email = models.EmailField(max_length=250, blank=True)
     subcounty=models.CharField(max_length=100)
     ward=models.CharField(max_length=100)
-    # disability=models.BooleanField(default=False)
+    
     disability=models.BooleanField(default=False)  
-    # cboreg=models.BooleanField(default=False)
+   
     cboreg=models.BooleanField(default=False)
     groupname=models.CharField(max_length=100)
     position=models.CharField(max_length=100)
-    # groupreg=models.BooleanField(default=False)
+    
     groupreg=models.BooleanField(default=False)
     groupoperationalyears=models.CharField(max_length=100)
     def __str__(self):
