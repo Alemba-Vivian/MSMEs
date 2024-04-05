@@ -41,29 +41,52 @@ class formViewSet(viewsets.ViewSet):
         serializer = MSMEquestionnaireSerializer(data=request.data)
         if serializer.is_valid():
                                     
+            # name =uresponse['name']
+            # phone =uresponse['phone']
+            # email = uresponse['email']
+            # subcounty=uresponse['subcounty']
+            # ward=uresponse['ward']
+            # disability=uresponse['disability']
+            # cboreg=uresponse['cboreg']
+            # groupname=uresponse['groupname']
+            # position=uresponse['position']
+            # groupreg=uresponse['groupreg']
+            # groupoperationalyears=uresponse['groupoperationalyears']
+            
             name =uresponse['name']
             phone =uresponse['phone']
             email = uresponse['email']
-            subcounty=uresponse['subcounty']
+            subCounty=uresponse['subCounty']
             ward=uresponse['ward']
             disability=uresponse['disability']
-            cboreg=uresponse['cboreg']
-            groupname=uresponse['groupname']
-            position=uresponse['position']
-            groupreg=uresponse['groupreg']
-            groupoperationalyears=uresponse['groupoperationalyears']
+            chama=uresponse['chama']
+            nameOfChama=uresponse['nameOfChama']
+            membershipPosition=uresponse['membershipPosition']
+            isChamaRegistered=uresponse['isChamaRegistered']
+            chamaOperation=uresponse['chamaOperation']
             
             msmse_questionnaire=MSMEquestionnaire.objects.create(name= name,
+            # phone =phone,
+            # email = email,
+            # subcounty=subcounty,
+            # ward=ward,
+            # disability=disability,
+            # cboreg=cboreg,
+            # groupname=groupname,
+            # position=position,
+            # groupreg=groupreg,      
+            # groupoperationalyears=groupoperationalyears)
+            
             phone =phone,
             email = email,
-            subcounty=subcounty,
+            subCounty= subCounty,
             ward=ward,
+            chama=chama,
             disability=disability,
-            cboreg=cboreg,
-            groupname=groupname,
-            position=position,
-            groupreg=groupreg,      
-            groupoperationalyears=groupoperationalyears)
+           nameOfChama=nameOfChama,
+           membershipPosition= membershipPosition,
+           isChamaRegistered= isChamaRegistered,      
+           chamaOperation=chamaOperation)
             serializer=MSMEquestionnaireSerializer(msmse_questionnaire)
             
             return Response(serializer.data, status=status.HTTP_201_CREATED)  
