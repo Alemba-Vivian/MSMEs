@@ -28,8 +28,8 @@
              <div>
               <h4 class="fs-subtitle">Do you have a disability?*</h4>
                 <mat-radio-group aria-label="Select an option"  formControlName="disability" >
-                  <mat-radio-button value="true"><span style="margin-right: 20px;">Yes</span></mat-radio-button>
-                  <mat-radio-button value="false"><span>No</span></mat-radio-button>
+                  <mat-radio-button value="True"><span style="margin-right: 20px;">Yes</span></mat-radio-button>
+                  <mat-radio-button value="False"><span>No</span></mat-radio-button>
                </mat-radio-group>
              </div>
 
@@ -57,8 +57,8 @@
 
               <h4 class="fs-subtitle">Are you a member of a self-help group/CBO/Chama etc.?*</h4>
                 <mat-radio-group aria-label="Select an option"  formControlName="chama" >
-                  <mat-radio-button value="true"><span style="margin-right: 20px;">Yes</span></mat-radio-button>
-                  <mat-radio-button value="false"><span>No</span></mat-radio-button>
+                  <mat-radio-button value="True"><span style="margin-right: 20px;">Yes</span></mat-radio-button>
+                  <mat-radio-button value="False"><span>No</span></mat-radio-button>
                </mat-radio-group>
                <div *ngIf="address_step && addressDetails.controls['chama'].errors">
                      <div *ngIf="address['chama'].errors?.['required']">Select an option</div>
@@ -94,8 +94,8 @@
                <div class="registered">
                 <h4 class="fs-subtitle">Is your group registered?*</h4>
                 <mat-radio-group aria-label="Select an option" formControlName="isChamaRegistered">
-                 <mat-radio-button value="true"><span style="margin-right: 20px;">Yes</span></mat-radio-button>
-                 <mat-radio-button value="false"><span>No</span></mat-radio-button>
+                 <mat-radio-button value="True"><span style="margin-right: 20px;">Yes</span></mat-radio-button>
+                 <mat-radio-button value="False"><span>No</span></mat-radio-button>
                 </mat-radio-group>
 
                 <div *ngIf="membership_step && membershipDetails.controls['isChamaRegistered'].errors">

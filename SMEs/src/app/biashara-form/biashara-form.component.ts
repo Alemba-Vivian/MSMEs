@@ -29,6 +29,7 @@ export class BiasharaFormComponent implements OnInit{
 
   ngOnInit() {
 
+
     this.personalDetails = this.formBuilder.group({
       name: ['', Validators.required],
       phone: ['', Validators.required],
@@ -102,7 +103,14 @@ export class BiasharaFormComponent implements OnInit{
 
     if (this.step == 3) {
       this.membership_step = true;
-      const response=(this.personalDetails.value, this.addressDetails.value, this.membershipDetails.value)
+      const response=
+      {
+       ... this.personalDetails.value,
+       ... this.addressDetails.value,
+       ... this.membershipDetails.value
+    };
+
+
 
 
 
