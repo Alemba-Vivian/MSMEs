@@ -18,6 +18,12 @@ class MSMEquestionnaire(models.Model):
     
     # groupreg=models.BooleanField(default=False)
     # groupoperationalyears=models.CharField(max_length=100)
+    Group_operation_choices=[
+        ('0-1 year','0-1 year'),
+         ('1-2 years','1-2 years'),
+          ('Above 2 years','Above 2 years'),
+        
+    ]
     name = models.CharField(max_length=100)
     phone =models.IntegerField()
     email = models.EmailField(max_length=250, blank=True)
@@ -31,7 +37,7 @@ class MSMEquestionnaire(models.Model):
     membershipPosition=models.CharField(max_length=100)
     
     isChamaRegistered=models.BooleanField(default=False)
-    chamaOperation=models.CharField(max_length=100)
+    chamaOperation=models.CharField(max_length=20,choices=Group_operation_choices)
     def __str__(self):
         return self.name
     
